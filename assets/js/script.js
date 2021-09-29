@@ -42,6 +42,26 @@ function checkAnswer(){
 
 }
 
+/**
+ * Get operands (the numbers) and the operator (plus,minus etc)
+ * directly from the dom , and return the correct answer.
+ */
+function calculateCorectAnswer(){
+
+    let operand1 = parseInt(document.getElementById('operand1').innerText);
+    let operand1 = parseInt(document.getElementById('operand2').innerText);
+    let operator = document.getElementById("operator").innerText;
+
+    if (operator === "+") {
+        return [ operand1 + operand2, "addition"];
+
+    }else{
+        alert(`Uniplemented operator ${operator}`);
+        throw `Uniplemented operator ${operator}.Aborting!`;
+    }
+
+}
+
 function calculateCorectAnswer(){
     
 }
@@ -52,7 +72,7 @@ function incrementWrongAnswer(){
 
 }
 function displayAdditionQuestion(operand1,operand2){
-    
+
 document.getElementById('operand1').textContent=operand1;
 document.getElementById('operand2').textContent=operand2;
 document.getElementById('operator').textContent="+";
